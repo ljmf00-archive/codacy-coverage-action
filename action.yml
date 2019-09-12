@@ -1,4 +1,4 @@
-name: 'Codacy'
+name: 'Codacy Coverage (test)'
 description: 'GitHub Action that uploads coverage to Codacy'
 author: 'Luís Ferreira <luis.ferreira@codacy.com>'
 inputs:
