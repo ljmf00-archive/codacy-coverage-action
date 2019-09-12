@@ -1,0 +1,20 @@
+name: 'Codacy'
+description: 'GitHub Action that uploads coverage to Codacy'
+author: 'Luís Ferreira <luis.ferreira@codacy.com>'
+inputs:
+  token:
+    description: 'Repository upload token - get it from codecov.io'
+    required: true
+  files:
+    description: 'Coverage file(s) to upload (separated by semicolons)'
+    required: false
+  language:
+    description: 'Reported language on the coverage report'
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.token }}
+    - ${{ inputs.files }}
+    - ${{ inputs.language }}
